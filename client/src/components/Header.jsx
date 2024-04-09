@@ -1,5 +1,6 @@
 
-// remove comment if getting an error
+
+//  remove comment if getting an error
 
 // import { Button, Navbar, TextInput, Dropdown, Avatar } from 'flowbite-react';
 // import { Link, useLocation } from 'react-router-dom';
@@ -126,9 +127,9 @@ export default function Header() {
             <div className='flex items-center'>
                 <Link to='/' className='whitespace-nowrap text-sm sm:text-xl font-semibold'>
                     <span className='px-2 py-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-lg text-white'>
-                        Bloggers
+                        Blogify
                     </span>
-                    Blog
+                    
                 </Link>
                 <form className='ml-4 hidden lg:inline'>
                     <TextInput
@@ -138,7 +139,7 @@ export default function Header() {
                         className='rounded-lg'
                     />
                 </form>
-                <Button className='w-12 h-10 ml-4 lg:hidden' color='gray' pill>
+                <Button className='w-12 h-8 ml-4 lg:hidden' color='gray' pill>
                     <AiOutlineSearch />
                 </Button>
             </div>
@@ -148,7 +149,20 @@ export default function Header() {
                         {/* <FaMoon /> */}
                     </Button>
                     <Link to='/sign-in'>
-                        <Button gradientDuoTone style={{ margin: '25px 3px', backgroundColor: '#1D4ED8', color: '#FFFFFF' }}>Sign In</Button>
+                    <Button 
+                     gradientDuoTone 
+                     style={{ 
+                     margin: '25px 3px', 
+                     backgroundColor: '#1D4ED8', 
+                     color: '#FFFFFF', 
+                    transition: 'background-color 0.3s ease, transform 0.3s ease' // Add transition for background-color and transform
+ }}
+ className="hover:bg-blue-700 hover:shadow-lg transform hover:scale-105" // Add hover effects
+>
+ Sign In
+</Button>
+
+                        {/* <Button gradientDuoTone style={{ margin: '25px 3px', backgroundColor: '#1D4ED8', color: '#FFFFFF' }}>Sign In</Button> */}
                     </Link>
                 </div>
                 <Navbar.Toggle />
